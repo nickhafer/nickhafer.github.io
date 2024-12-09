@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+#timeline-chart,
+#shape-chart {
+    height: 400px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-controls select {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+    min-width: 120px;
+}
+
+.filter-controls select:hover {
+    border-color: #3498db;
+}
+
+.dot {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dot:hover {
+    r: 6;
+}
+
+.tooltip {
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.narrative-text {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Space background styles */
+.space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0f0f3d, #1a1a4a);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.stars-layer {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    background-repeat: repeat;
+    animation: space-scroll linear infinite;
+}
+
+.stars-1 { animation-duration: 200s; }
+.stars-2 { animation-duration: 150s; }
+.stars-3 { animation-duration: 100s; }
+
+@keyframes space-scroll {
+    from { transform: translate(0, 0); }
+    to { transform: translate(50%, 50%); }
+}
+
+.x-label, .y-label {
+    fill: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
